@@ -653,8 +653,11 @@ function getRandomInteger(min, max) {
  * @example:
  * 3, 4 => 5
  */
-function getHypotenuse(/* a, b */) {
-  throw new Error('Not implemented');
+function getHypotenuse(a, b) {
+  // throw new Error('Not implemented');
+  return Number.isFinite(Math.hypot(a, b))
+    ? Math.hypot(a, b)
+    : Number.MAX_VALUE;
 }
 
 /**
